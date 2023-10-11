@@ -1,0 +1,128 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+    background-image: linear-gradient(to bottom right,#43cea2,#185a9d); /* colour gradient */
+  }
+  tr, th, td{
+    text-align: center;
+    padding:5px;
+    border-bottom:1px solid black; /* table border*/
+  }
+  .title_heading{
+    text-align: center;
+    color: #cfdfda;
+    font-family:Arial;
+  }
+  .white_label{
+    color: #cfdfda;
+    font-family: Arial;
+  }
+  .task_inp{
+    padding-left:5%;
+  }
+  .hidden{
+    visibility: hidden;
+  }
+  .visible{
+    visibility: visible;
+  }
+  .button{ /* button class */
+    background-color: #cfdfda; 
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; /* shows a button to click*/
+    font-family:Arial;
+    width: 160px;
+  }
+  .delete_button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .button_hover:hover{ /* buttons will have a shadow effect when hovered on*/
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .dropdown:hover .dropdown-content{
+    display:block;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+  }
+  #add_task_box{
+    border-radius: 20px;
+    background-color: #47b1b1;
+    padding-top: 3px;
+    width :550px;
+    height: 500px;
+    position:absolute;
+    top: 36.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #list_box{
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right,#185a9d,#43cea2);
+    padding-top: 3px;
+    width: 600px;
+    height: 550px;
+  }
+  #container{
+    width: 600px;
+    margin:0 auto;
+    position: relative;
+  }
+  #button_container{
+    padding-top: 3%;
+    display:flex;
+    justify-content: space-between;
+  }
+  #close_button{
+    background-color:#cfdfda; 
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 50%;
+    color: red;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-family:Arial;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+  #task_data_table{ /* centre */
+    margin-left: auto; 
+    margin-right: auto;
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>APP To-Do List</title>
+  <link href="../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <script src="../static/script.js"></script>
+  <h1 class="title_heading">Welcome to my To-Do List!</h1>
+  <div id="container">  <!-- container for the to do list -->
+    <div id="list_box" class="visible">
+    <h2 class="title_heading">My list</h2>
+    <table id="task_data_table"> <!-- table to display to-do's -->
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Task Due Date</th>
+          <th>Task Description</th>
+          <th>Task Priority</th>
+          <th>Delete Task</th>
+        </tr>
+      </thead>
+    </table>
+    </div>
+    <div id="button_container">
+      <div class="dropdown">
+        <button class="button button_hover">Sort by Dates</button>
+        <div class="dropdown-content" > <!--drop down for sorting options -->
+          <a href = "#" class = "button_hover" onclick="sort_datefurthest()">Furthest</a>
+          <a href = "#" class = "button_hover" onclick="sort_dateclosest()">Closest</a>
+        </div>
+      </div>
+      <button class="button button_hover" onclick="show_add_task()">Add a task</button>
+      <div class="dropdown">
+        <button class="button button_hover">Sort by Priority</button>
+        <div class="dropdown-content" >
+          <a href = "#" class = "button_hover" onclick="sort_priority_H2L()">Highest to lowest</a> <!-- sort task when clicked -->
+          <a href = "#" class = "button_hover" onclick="sort_priority_L2H()">Lowest to highest</a>
+        </div>
+      </div>
+      </div>
+  </div>
+  <div id="add_task_menu" class="hidden">
+    <div id="add_task_box"> <!-- add task box -->
+      <button id="close_button" onclick="hide_add_task()">X</button>
+      <div class="task_inp">
+      <h2 class="title_heading">Add List Item</h2>
+      <p class="white_label">Task Name*</p>
+      <input type="text" id="TaskName">
+      <p class="white_label">Due Date</p>
+      <input type="date" id="TaskDue">
+      <p class="white_label">Description*</p>
+      <input type="text" id="TaskDesc">
+      <p class="white_label">Priority*</p>
+      <select id="TaskPrio">
+        <option>None</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <p>* means requried</p>
+      <button class="button button_hover" onclick="add_task()">Submit</button> <!-- submit task when clicked -->
+    </div>
+    </div>
+  </div>
+</body>
+</html>
